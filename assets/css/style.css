@@ -1,0 +1,828 @@
+/* ==================== Global Styles ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #f6faff;
+  color: #22304a;
+  min-height: 100vh;
+  line-height: 1.6;
+  padding-top: 80px; /* Prevent content from going under navbar */
+}
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+  transition: color 0.2s;
+}
+a:hover, a.active {
+  color: #1d4ed8;
+}
+/* ==================== Navbar ==================== */
+header, nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 60px; /* reduced height */
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;   /* Black logo */
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;   /* Black links */
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;   /* Blue hover */
+  background: transparent;
+}
+
+/* ==================== Page Containers ==================== */
+.page-container,
+.about-container,
+.privacy-container,
+.terms-container,
+.contact-container,
+.cart-container,
+.login-container,
+.signup-container {
+  max-width: 1000px;
+  margin: 40px auto 60px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* ==================== Headings ==================== */
+.page-container h1,
+.about-container h1,
+.privacy-container h1,
+.terms-container h1,
+.contact-container h1,
+.cart-container h1,
+.login-container h1,
+.signup-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* ==================== Paragraphs ==================== */
+.page-container p,
+.about-container p,
+.privacy-container p,
+.terms-container p,
+.contact-container p,
+.login-container p,
+.signup-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ==================== Links ==================== */
+.page-container a,
+.about-container a,
+.privacy-container a,
+.terms-container a,
+.contact-container a,
+.login-container a,
+.signup-container a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.page-container a:hover,
+.about-container a:hover,
+.privacy-container a:hover,
+.terms-container a:hover,
+.contact-container a:hover,
+.login-container a:hover,
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Add to Cart */
+.btn-add {
+  background: #3b82f6;
+}
+.btn-add:hover {
+  background: #2563eb;
+}
+
+/* Remove from Cart */
+.btn-remove {
+  background: #e0e7ef;
+  color: #2563eb;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #dbeafe;
+}
+.btn-remove:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Checkout */
+.checkout-btn {
+  background: #2563eb;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.checkout-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Inline form for cart actions */
+.inline-form {
+  display: inline-block;
+  margin: 0;
+}
+
+/* ==================== Cart Icon ==================== */
+.cart {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;   /* Black cart icon */
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;   /* Red notification */
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 7px;
+  border-radius: 50%;
+  font-weight: 600;
+  border: 2px solid #fff;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0; top: 40px;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  z-index: 200;
+}
+.cart-dropdown.active {
+  display: block;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5fa;
+  font-size: 15px;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+  height: 70vh;
+  background: ur("C:\wamp64\www\phone cases\6d18ef93-fb6a-4c53-b289-a2c04fbcd1fc.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  color: white;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  background: #2563eb;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.hero-content .btn:hover {
+  background: #1d4ed8;
+}
+
+.hero-content p {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: white;
+}
+
+/* ==================== Modal ==================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(37,99,235,0.10);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  max-width: 420px;
+  width: 92%;
+  text-align: center;
+  box-shadow: 0 5px 24px rgba(37,99,235,0.10);
+}
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #000;
+}
+.close {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Centered Modal List */
+.model-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.model-list li {
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  padding: 12px;
+  margin: 5px 0;
+  background: #f4f8ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #000;
+  font-weight: 500;
+}
+.model-list li:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.04);
+}
+
+/* ==================== Products ==================== */
+.products {
+  padding: 60px 6% 30px 6%;
+}
+.products h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000;   /* Black heading */
+  font-weight: 700;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #fff;
+}
+.product-info {
+  padding: 18px 10px 10px 10px;
+}
+.price {
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* ==================== Cart Page ==================== */
+.cart-container {
+  width: 95%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 18px rgba(37,99,235,0.06);
+}
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-table th, 
+.cart-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f1f5fa;
+}
+.cart-table th {
+  background: #f4f8ff;
+  font-weight: 600;
+  color: #2563eb;
+}
+.cart-table img {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  background: #f4f8ff;
+}
+.cart-summary {
+  text-align: right;
+  margin-top: 20px;
+}
+.cart-summary p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* ==================== Footer ==================== */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 16px 0;
+  margin-top: 50px;
+  border-top: 1px solid #e0e7ef;
+  font-size: 1rem;
+}
+footer a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 900px) {
+  .products {
+    padding: 40px 2% 20px 2%;
+  }
+  .cart-container {
+    padding: 12px;
+  }
+  .navbar {
+    padding: 12px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .products h2 {
+    font-size: 1.3rem;
+  }
+}
+/* ==================== Privacy Policy Page ==================== */
+.privacy-container {
+  max-width: 900px;
+  margin: 120px auto 60px auto; /* below navbar */
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Main Title */
+.privacy-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Subheadings */
+.privacy-container h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+/* Paragraphs */
+.privacy-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Email Link */
+.privacy-container a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.privacy-container a:hover {
+  text-decoration: underline;
+}
+
+/* Footer - ensure consistent with homepage */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+}
+.footer a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+/* ==================== Global Page Container ==================== */
+.page-container {
+  max-width: 1000px;
+  margin: 120px auto 60px auto; /* space below navbar */
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Main Page Titles (h1) */
+.page-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Subheadings (h2, h3) */
+.page-container h2, 
+.page-container h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+/* Paragraphs */
+.page-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Lists */
+.page-container ul, 
+.page-container ol {
+  margin: 10px 0 20px 30px;
+  color: #444;
+}
+.page-container li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Links */
+.page-container a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.page-container a:hover {
+  text-decoration: underline;
+}
+
+/* Tables (for terms, orders, etc.) */
+.page-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.page-container th, 
+.page-container td {
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+.page-container th {
+  background: #f4f8ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Forms (login, signup, contact) */
+.page-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.page-container input,
+.page-container textarea,
+.page-container select {
+  padding: 12px 14px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.page-container button {
+  align-self: flex-start;
+}
+
+/* ==================== Page Container ==================== */
+.page-container {
+  max-width: 1000px;
+  margin: 120px auto 60px auto; /* spacing from navbar */
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.page-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.page-container h2, 
+.page-container h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* Paragraphs */
+.page-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Links */
+.page-container a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.page-container a:hover {
+  text-decoration: underline;
+}
+/* ==================== Form Inputs ==================== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 50%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==================== Form Labels ==================== */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #22304a;
+}
+
+/* ==================== Error / Success Messages ==================== */
+.form-message {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.form-message.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.form-message.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+/* ==================== Global Button Styles ==================== */
+button,
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #007bff, #0056d2); /* Blue gradient */
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover,
+.btn:hover {
+  background: linear-gradient(135deg, #0056d2, #0041a8);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled,
+.btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Variants */
+.btn-outline {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-light {
+  background: #f1f5ff;
+  color: #0056d2;
+  box-shadow: none;
+}
+
+.btn-light:hover {
+  background: #e0e8ff;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background: #0056d2;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 8px 0;
+}
