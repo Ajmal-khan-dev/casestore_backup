@@ -123,8 +123,9 @@ include 'config/db.php'; // DB connection
        <a href="pages/privacy.php">Privacy Policy</a> | 
        <a href="pages/terms.php">Terms</a> | 
        <a href="pages/signup.php">Signup</a> | 
-       <a href="pages/login.php">Login</a> |
-       <a href="pages/contact.php">Contact</a>
+       <a href="pages/login.php">Login</a> | 
+       <a href="pages/contact.php">Contact</a> | 
+       <a href="admin">Merchant</a>
     </p>
   </footer>
   <script>

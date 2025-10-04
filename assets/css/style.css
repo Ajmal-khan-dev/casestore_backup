@@ -222,14 +222,18 @@ header, nav {
 
 /* ==================== Hero Section ==================== */
 .hero {
-  height: 70vh;
-  background: ur("../image/background.jpg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+    height: 400px;
+    background-image: url('../image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
+
 
 .hero-content {
   color: white;

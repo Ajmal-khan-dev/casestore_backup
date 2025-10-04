@@ -27,6 +27,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+  <a href="../index.php" class="back-btn">← Back</a>
   <div class="container">
     <div class="product-detail">
       <div class="product-image">

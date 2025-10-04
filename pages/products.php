@@ -84,6 +84,7 @@ include '../config/db.php';
     </style>
 </head>
 <body>
+<a href="../index.php" class="back-btn">← Back</a>
 <div class="container">
     <h2>Our Phone Cases</h2>
     <div class="product-grid">
