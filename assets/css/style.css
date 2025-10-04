@@ -223,7 +223,7 @@ header, nav {
 /* ==================== Hero Section ==================== */
 .hero {
   height: 70vh;
-  background: ur("../image/background.jpg.jpg");
+  background: ur("../image/background.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
