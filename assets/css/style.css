@@ -223,7 +223,7 @@ header, nav {
 /* ==================== Hero Section ==================== */
 .hero {
   height: 70vh;
-  background: ur("C:\wamp64\www\phone cases\6d18ef93-fb6a-4c53-b289-a2c04fbcd1fc.jpg");
+  background: ur("../image/background.jpg.jpg");
   display: flex;
   justify-content: center;
   align-items: center;

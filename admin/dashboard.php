@@ -13,7 +13,7 @@ if (!isset($_SESSION['admin_id'])) {
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         body {
-            background-image: url('../assets/image/admin-bg.jpg'); /* Replace with your image path */
+            background-image: url('../assets/image/background.jpg'); /* Replace with your image path */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
