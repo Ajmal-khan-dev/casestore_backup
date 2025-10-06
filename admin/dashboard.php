@@ -20,8 +20,8 @@ if (!isset($_SESSION['admin_id'])) {
         }
     </style>
 </head>
-<body>
-    <h1>Welcome to Admin Dashboard</h1>
+<body style="background-color: black;">
+    <h1 style="color: white;">Welcome to Admin Dashboard</h1>
     <nav>
         <a href="manage_products.php">Manage Products</a> |
         <a href="manage_orders.php">Manage Orders</a> |
