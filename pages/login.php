@@ -5,15 +5,15 @@ include '../config/db.php'; // adjust path if needed
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST['email']);
+    $login_input = trim($_POST['login_input']); // can be username or email
     $password = trim($_POST['password']);
 
-    if (empty($email) || empty($password)) {
-        $message = "Please enter both email and password.";
+    if (empty($login_input) || empty($password)) {
+        $message = "Please enter your username/email and password.";
     } else {
-        // Fetch user
-        $stmt = $conn->prepare("SELECT id, name, password, is_admin FROM users WHERE email = ?");
-        $stmt->bind_param("s", $email);
+        // Fetch user by username or email
+        $stmt = $conn->prepare("SELECT id, username, name, password, is_admin FROM users WHERE email = ? OR username = ?");
+        $stmt->bind_param("ss", $login_input, $login_input);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verify password
             if (password_verify($password, $user['password'])) {
                 $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['is_admin'] = $user['is_admin'];
 
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $message = "Invalid password.";
             }
         } else {
-            $message = "No account found with this email.";
+            $message = "No account found with this username/email.";
         }
     }
 }
@@ -52,8 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (!empty($message)) echo "<p style='color:red;'>$message</p>"; ?>
 
     <form method="POST" action="">
-        <label>Email:</label>
-        <input type="email" name="email" required>
+        <label>Username/Email:</label>
+        <input type="text" name="login_input" required>
         <label>Password:</label>
         <input type="password" name="password" required><br>
         <button type="submit">Login</button>

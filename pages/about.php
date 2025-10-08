@@ -51,7 +51,10 @@
   <section class="section">
     <h2>About Us</h2>
     <p>Cas’E’Store provides stylish, durable, and modern phone cases for all major brands.
-       Our mission is to protect your device while keeping it fashionable.</p>
+       Our mission is to protect your device while keeping it fashionable.
+      Casestore is a comprehensive e-commerce platform created to simplify the process of buying and selling mobile and electronic accessories online.
+      The platform offers a user-friendly interface where customers can browse through a wide range of products, view detailed product descriptions, and add items to their shopping cart with ease.
+      The checkout process is designed to be straightforward and secure, ensuring a smooth experience for customers.</p>
   </section>
 
   <footer>

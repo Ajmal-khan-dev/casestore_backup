@@ -30,6 +30,7 @@ include 'config/db.php'; // DB connection
       <?php if (isset($_SESSION['user_id'])): ?>
   <a href="pages/my_orders.php">Orders</a>
   <a href="actions/logout.php">Logout</a>
+  <a href="pages/profile.php">👤</a>
 <?php else: ?>
   <a href="pages/login.php">Login</a>
 <?php endif; ?>

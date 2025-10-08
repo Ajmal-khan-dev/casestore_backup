@@ -75,7 +75,11 @@ if ($total <= 0) {
                 <input type="text" name="city" required>
 
                 <label for="zipcode">Zip Code</label>
-                <input type="text" name="zipcode" required>
+                <input type="text" name="zipcode" required 
+                 pattern="[0-9]{6}" 
+                 maxlength="6" 
+                 title="Please enter a valid 6-digit Zip Code">
+
 
                 <label for="payment">Payment Method</label>
                 <select name="payment" required>
