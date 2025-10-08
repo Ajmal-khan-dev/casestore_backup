@@ -52,15 +52,11 @@
   <!-- Contact Section -->
   <section class="section">
     <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to reach out to us using the form below.</p>
+    <p>You can get in touch with us through the following contact details. For any inquiries or support, feel free to email us, call our customer service number, or visit us at our office address.</p><br>
+    <p>Email: support@casestore.com</p><br>
+    <p>Phone: +91 98765 43210</p><br>
+    <p>Address: Cas’E’Store, 123 Market Road, Trivandrum, Kerala, India</p><br>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required><br>
-      <input type="email" placeholder="Your Email" required><br>
-      <textarea placeholder="Your Message" rows="5" required></textarea><br>
-      <button type="submit" class="btn">Send Message</button>
-       <button type="submit" class="btn">Send Message</button>
-    </form>
   </section>
 
   <!-- Footer -->

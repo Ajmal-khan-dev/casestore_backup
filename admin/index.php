@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <a href="../index.php" class="back-btn">← Back</a>
     <h2>Admin Login</h2>
     <?php if ($error) echo "<p style='color:red;'>$error</p>"; ?>
     <form method="post">

@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['is_admin'] = $user['is_admin'];
 
                 if ($user['is_admin'] == 1) {
-                    header("Location: ../admin/index.php"); // admin panel
+                    header("Location: ../admin/dashboard.php"); // admin panel
                 } else {
                     header("Location: ../index.php"); // normal user
                 }
@@ -49,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../assets/css/style.css"> <!-- adjust -->
 </head>
 <body>
+      <a href="../index.php" class="back-btn">← Back</a>
     <h2>Login</h2>
     <?php if (!empty($message)) echo "<p style='color:red;'>$message</p>"; ?>
 
